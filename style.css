@@ -1,0 +1,385 @@
+/* ======================== BODY STYLING ======================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ======================== HERO SECTION ======================== */
+.hero-section {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+  background-size: cover;
+  padding: 120px 0;
+  color: white;
+  text-align: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 80px 0;
+  border-radius: 0;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 50px;
+  opacity: 0.9;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======================== NAVBAR ======================== */
+.navbar {
+  background: linear-gradient(135deg, #c4e93e, #5882a3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar.dark {
+  background: linear-gradient(135deg, #1f1f1f, #2c3e50);
+}
+
+/* ======================== FILTER BAR ======================== */
+.filter-bar {
+  border-radius: 15px;
+  padding: 25px;
+  margin-top: -50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: 5;
+  position: relative;
+}
+
+.filter-bar input,
+.filter-bar select,
+.filter-bar .dropdown-toggle {
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+.filter-bar .dropdown-item input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+/* ======================== RECIPE CARD ======================== */
+.card-recipe {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(145deg, #dbcdd0, #ceb10c70);
+}
+
+.card-recipe:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(12, 12, 12, 0.863);
+}
+
+.card-recipe img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card-recipe:hover img {
+  transform: scale(1.08);
+}
+
+.dark .card-recipe {
+  background: linear-gradient(145deg, #34495e, #2c3e50);
+  color: #fff;
+}
+
+/* ======================== MODAL (POPUP) STYLING ======================== */
+.modal-content {
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1)
+    url('https://media.istockphoto.com/id/1820694690/vector/cooking-background-with-decorative-frame-horizontal-flyer-with-food-items-meal-ingredients.jpg?s=612x612&w=0&k=20&c=Eup2tjfKPjVgsu8MgnVwBhICoAtj_fGTOfquPOkDnWc=')
+    no-repeat center center;
+  background-size: cover;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.modal.fade .modal-dialog {
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.modal.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.dark .modal-content {
+  background: rgba(52, 73, 94, 0.95);
+}
+
+.dark .modal-header {
+  background: linear-gradient(135deg, #1f1f1f, #2c3e50);
+}
+
+/* ======================== ABOUT US SECTION ======================== */
+.about-section {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  color: #333;
+}
+
+.about-section h2 {
+  color: #495057;
+  font-weight: 700;
+}
+
+.about-section .lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.dark .about-section {
+  background: linear-gradient(135deg, #343a40, #495057);
+  color: #fff;
+}
+
+.dark .about-section h2 {
+  color: #f8f9fa;
+}
+
+/* ======================== CONTACT US SECTION ======================== */
+.contact-section {
+  background: linear-gradient(135deg, #e9ecef, #f8f9fa);
+  color: #333;
+  padding: 60px 0;
+}
+
+.contact-section h2 {
+  color: #495057;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contact-section .lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.contact-section textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-section button {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.contact-section button:active {
+  transform: scale(0.98);
+}
+
+.contact-section #status {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.dark .contact-section {
+  background: linear-gradient(135deg, #495057, #343a40);
+  color: #fff;
+}
+
+.dark .contact-section h2 {
+  color: #f8f9fa;
+}
+
+.dark .contact-section input,
+.dark .contact-section textarea {
+  background-color: #495057;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+.dark .contact-section input:focus,
+.dark .contact-section textarea:focus {
+  border-color: #80bdff;
+  background-color: #495057;
+}
+
+.dark .contact-section button {
+  background: linear-gradient(135deg, #0056b3, #003d82);
+}
+
+.dark .contact-section #status {
+  color: #f8f9fa;
+}
+
+/* ======================== FOOTER ======================== */
+.footer {
+  background: linear-gradient(135deg, #343a40, #495057);
+  color: #fff;
+  padding: 40px 0 20px;
+  margin-top: 60px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer h5 {
+  color: #f8f9fa;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer h6 {
+  color: #adb5bd;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.footer p {
+  color: #ced4da;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li a {
+  color: #ced4da;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #f8f9fa;
+}
+
+.footer .d-flex a {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .d-flex a:hover {
+  transform: scale(1.2);
+  color: #f8f9fa;
+}
+
+.footer hr {
+  border-color: #495057;
+  margin: 30px 0;
+}
+
+.footer .text-center p {
+  color: #adb5bd;
+  font-size: 0.9rem;
+}
+
+.dark .footer {
+  background: linear-gradient(135deg, #1f1f1f, #2c3e50);
+}
+
+.dark .footer h5,
+.dark .footer h6 {
+  color: #f8f9fa;
+}
+
+.dark .footer p,
+.dark .footer ul li a {
+  color: #ced4da;
+}
+
+.dark .footer .d-flex a {
+  color: #ced4da;
+}
+
+.dark .footer .d-flex a:hover {
+  color: #f8f9fa;
+}
+
+.dark .footer hr {
+  border-color: #495057;
+}
+
+.dark .footer .text-center p {
+  color: #adb5bd;
+}

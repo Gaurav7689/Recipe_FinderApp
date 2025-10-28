@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Recipe Finder</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+
+  <nav class="navbar navbar-dark">
+    <div class="container d-flex justify-content-between align-items-center">
+      <img
+        src="https://play-lh.googleusercontent.com/hFygWSfqgqZEVLVJ8jI_XsWnqRMj2d5bQQUfd8NM9LBxfJ0LPnlu6nYsLn_7mUGaNNk"
+        alt="" height="60px">
+      <span class="navbar-brand fw-bold" style="text-shadow: 2px 2px 5px rgb(238, 21, 21);">
+        <i class="bi bi-egg-fried me-2"></i>SMART RECIPE FINDER
+      </span>
+      <div class="d-flex align-items-center">
+        <a href="#" class="btn btn-outline-light btn-sm me-2">Home</a>
+        <a href="#about-us" class="btn btn-outline-light btn-sm me-2">About Us</a>
+        <a href="#contact-us" class="btn btn-outline-light btn-sm me-2">Contact Us</a>
+        <button id="modeToggle" class="btn btn-outline-light btn-sm">🌙 Dark Mode</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <div class="container">
+        <div class="hero-content text-center">
+          <h1 class="hero-title">Discover Delicious Recipes</h1>
+          <p class="hero-subtitle">Find the perfect meal with our smart filters</p>
+          <div class="filter-bar">
+            <div class="row g-3 justify-content-center">
+              <div class="col-md-4">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-search"></i></span>
+                  <input type="text" id="ingredientInput" class="form-control" placeholder="Search by ingredient (e.g. chicken, paneer)" aria-label="Search by ingredient">
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-flower1"></i></span>
+                  <div class="dropdown">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dietDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      Select Diets
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dietDropdown">
+                      <li><label class="dropdown-item"><input type="checkbox" class="diet-checkbox" value="vegan"> Vegan</label></li>
+                      <li><label class="dropdown-item"><input type="checkbox" class="diet-checkbox" value="vegetarian"> Vegetarian</label></li>
+                      <li><label class="dropdown-item"><input type="checkbox" class="diet-checkbox" value="keto"> Keto</label></li>
+                      <li><label class="dropdown-item"><input type="checkbox" class="diet-checkbox" value="paleo"> Paleo</label></li>
+                      <li><label class="dropdown-item"><input type="checkbox" class="diet-checkbox" value="autoimmune"> Autoimmune</label></li>
+                      <li><label class="dropdown-item"><input type="checkbox" class="diet-checkbox" value="low-fodmap"> Low-FODMAP</label></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-shield-exclamation"></i></span>
+                  <div class="dropdown">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="allergyDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      Select Allergies
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="allergyDropdown">
+                      <li><label class="dropdown-item"><input type="checkbox" class="allergy-checkbox" value="gluten"> Gluten</label></li>
+                      <li><label class="dropdown-item"><input type="checkbox" class="allergy-checkbox" value="dairy"> Dairy</label></li>
+                      <li><label class="dropdown-item"><input type="checkbox" class="allergy-checkbox" value="nuts"> Nuts</label></li>
+                      <li><label class="dropdown-item"><input type="checkbox" class="allergy-checkbox" value="soy"> Soy</label></li>
+                      <li><label class="dropdown-item"><input type="checkbox" class="allergy-checkbox" value="eggs"> Eggs</label></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container mt-5">
+    <div id="recipeContainer" class="row"></div>
+  </div>
+
+  <section id="about-us" class="about-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="mb-4">About Us</h2>
+          <p class="lead">Welcome to Smart Recipe Finder, your ultimate companion for discovering delicious and healthy recipes tailored to your preferences. Whether you're looking for vegan options, keto-friendly meals, or recipes free from common allergens, our app makes it easy to find the perfect dish.</p>
+          <p>Our mission is to inspire home cooks and food enthusiasts by providing a user-friendly platform with smart filters, detailed instructions, and downloadable recipes. Created with passion by Gaurav, we aim to make cooking fun, accessible, and enjoyable for everyone.</p>
+          <p>Explore, cook, and enjoy the art of cooking with Smart Recipe Finder!</p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Cooking Ingredients" class="img-fluid rounded shadow" style="max-height: 400px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-us" class="contact-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center">
+          <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Contact Us" class="img-fluid rounded shadow" style="max-height: 400px;">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="mb-4">Contact Us</h2>
+          <p class="lead">Have feedback, suggestions, or queries? We'd love to hear from you! Reach out to us and let's make cooking even better together.</p>
+         <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="status"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="recipeModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-white"
+          style="background:linear-gradient(135deg, #c4e93e, #5882a3); text-shadow: 2px 2px 5px rgb(238, 21, 21)">
+          <h5 class="modal-title" id="modalTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex align-items-start">
+            <div class="flex-grow-1">
+              <h6><b>Ingredients:</b></h6>
+              <ul id="modalIngredients"></ul>
+            </div>
+            <div class="ms-3">
+              <button id="downloadBtn" class="btn btn-primary">Download Recipe</button>
+            </div>
+          </div>
+          <h6><b>Instructions:</b></h6>
+          <p id="modalInstructions"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer bg-dark text-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5 class="fw-bold">Smart Recipe Finder</h5>
+          <p class="mb-3">Discover, Cook, Enjoy! Find delicious recipes tailored to your diet and preferences.</p>
+          <p class="small text-muted">Your ultimate companion for healthy and delicious meals.</p>
+        </div>
+        <div class="col-lg-2 col-md-3 mb-4">
+          <h6 class="fw-bold text-uppercase">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-light text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="#about-us" class="text-light text-decoration-none">About Us</a></li>
+            <li class="mb-2"><a href="#contact-us" class="text-light text-decoration-none">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 mb-4">
+          <h6 class="fw-bold text-uppercase">Recipes</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-light text-decoration-none">Vegan</a></li>
+            <li class="mb-2"><a href="#" class="text-light text-decoration-none">Keto</a></li>
+            <li class="mb-2"><a href="#" class="text-light text-decoration-none">Gluten-Free</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h6 class="fw-bold text-uppercase">Follow Us</h6>
+          <p class="mb-3">Stay connected for the latest recipes and tips!</p>
+          <div class="d-flex">
+            <a href="#" class="text-light me-3 fs-4" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-light me-3 fs-4" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-light me-3 fs-4" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-light fs-4" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4 border-secondary">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0 small text-muted">
+            &copy; 2025 Smart Recipe Finder. All rights reserved.
+          </p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-0">
+            Made with <i class="bi bi-heart-fill text-danger"></i> by Gaurav 🇮🇳
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
